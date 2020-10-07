@@ -308,7 +308,7 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
     let s:hue_6   = ['#d19a66', '173'] " orange 1
     let s:hue_6_2 = ['#e5c07b', '180'] " orange 2
 
-    let s:syntax_bg     = ['#282c34', '16']
+    let s:syntax_bg     = ['#08090d', '16']
     let s:syntax_gutter = ['#636d83', '60']
     let s:syntax_cursor = ['#2c323c', '16']
 
@@ -317,6 +317,10 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
     let s:vertsplit    = ['#181a1f', '233']
     let s:special_grey = ['#3b4048', '16']
     let s:visual_grey  = ['#3e4452', '17']
+    let s:visual_bgrey = ['#013d6e', '17']
+    let s:dark_blue    = ['#000088', '17']
+    "  #002c78
+    "  #001078
     let s:pmenu        = ['#333841', '16']
   else
     let s:mono_1 = ['#494b53', '23']
@@ -389,8 +393,8 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   call <sid>X('TabLineFill',  s:mono_3,        s:visual_grey,    'none')
   call <sid>X('TabLineSel',   s:syntax_bg,     s:hue_2,          '')
   call <sid>X('Title',        s:syntax_fg,     '',               'bold')
-  call <sid>X('Visual',       '',              s:visual_grey,    '')
-  call <sid>X('VisualNOS',    '',              s:visual_grey,    '')
+  call <sid>X('Visual',       '',              s:dark_blue,    '')
+  call <sid>X('VisualNOS',    '',              s:dark_blue,    '')
   call <sid>X('WarningMsg',   s:hue_5,         '',               '')
   call <sid>X('TooLong',      s:hue_5,         '',               '')
   call <sid>X('WildMenu',     s:syntax_fg,     s:mono_3,         '')
@@ -847,14 +851,16 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   if has('nvim')
     let g:terminal_color_0  = "#353a44"
     let g:terminal_color_8  = "#353a44"
-    let g:terminal_color_1  = "#e88388"
-    let g:terminal_color_9  = "#e88388"
+    let g:terminal_color_1  = "#e06c75"
+    let g:terminal_color_9  = "#e06c75"  
     let g:terminal_color_2  = "#a7cc8c"
     let g:terminal_color_10 = "#a7cc8c"
     let g:terminal_color_3  = "#ebca8d"
     let g:terminal_color_11 = "#ebca8d"
-    let g:terminal_color_4  = "#72bef2"
-    let g:terminal_color_12 = "#72bef2"
+    let g:terminal_color_4  = "#00a5ff"
+    let g:terminal_color_4  = "#00a5ff"
+    " let g:terminal_color_12 = "#61afef"
+    " let g:terminal_color_12 = "#61afef"
     let g:terminal_color_5  = "#d291e4"
     let g:terminal_color_13 = "#d291e4"
     let g:terminal_color_6  = "#65c2cd"

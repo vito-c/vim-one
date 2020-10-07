@@ -38,6 +38,32 @@ function! airline#themes#one#refresh()
   let g:airline#themes#one#palette.inactive_modified = {
         \ 'airline_c': [ group[0], '', group[2], '', '' ]
         \ }
+  let g:airline#themes#one#palette.tabline = {}
+
+  let s:mono_1 = ['#abb2bf', '145']
+  let s:mono_3 = ['#5c6370', '59']
+  let s:visual_grey  = ['#3e4452', '17']
+  let s:syntax_bg     = ['#08090d', '16']
+  let s:hue_1  = ['#56b6c2', '73'] " cyan
+  let s:hue_2  = ['#61afef', '75'] " blue
+  let s:hue_4  = ['#98c379', '114'] " green
+  let s:special_grey = ['#3b4048', '16']
+  let s:visual_grey  = ['#3e4452', '17']
+  " call <sid>X('TabLine',      s:mono_1,        s:syntax_bg,      '')
+  " call <sid>X('TabLineFill',  s:mono_3,        s:visual_grey,    'none')
+  " call <sid>X('TabLineSel',   s:syntax_bg,     s:hue_2,          '')
+  " dark gray: 2d323b
+  
+      " \ 'airline_tab':      ['#61afef', '#2d323b',  237, 250, ''],
+let g:airline#themes#one#palette.tabline = {
+      \ 'airline_tab':      [s:hue_2[0], '#2d323b',  s:hue_2[1], 250, ''],
+      \ 'airline_tabsel':   ['#000000', s:hue_2[0], s:syntax_bg[1], s:hue_2[1], ''],
+      \ 'airline_tabmod':   [s:syntax_bg[0], s:hue_4[0], s:syntax_bg[1], s:hue_4[1], ''],
+      \ 'airline_tabfill':  [s:mono_3[0], s:syntax_bg[0], s:mono_3[1], s:syntax_bg[1], ''],
+      \ }
+      " \ 'airline_tabtype':  ['#00FF00', '#00FF00',  237, 248, ''],
+
+
 endfunction
 
 call airline#themes#one#refresh()
