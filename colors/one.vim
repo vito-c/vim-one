@@ -312,13 +312,14 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
     let s:syntax_gutter = ['#636d83', '60']
     let s:syntax_cursor = ['#2c323c', '16']
 
-    let s:syntax_accent = ['#528bff', '69']
+    let s:syntax_accent = ['#528bff', '69'] " cool blue
 
     let s:vertsplit    = ['#181a1f', '233']
     let s:special_grey = ['#3b4048', '16']
     let s:visual_grey  = ['#3e4452', '17']
     let s:visual_bgrey = ['#013d6e', '17']
     let s:dark_blue    = ['#000088', '17']
+    let s:cool_blue    = ['#528bff', '69']
     "  #002c78
     "  #001078
     let s:pmenu        = ['#333841', '16']
@@ -393,8 +394,8 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   call <sid>X('TabLineFill',  s:mono_3,        s:visual_grey,    'none')
   call <sid>X('TabLineSel',   s:syntax_bg,     s:hue_2,          '')
   call <sid>X('Title',        s:syntax_fg,     '',               'bold')
-  call <sid>X('Visual',       '',              s:dark_blue,    '')
-  call <sid>X('VisualNOS',    '',              s:dark_blue,    '')
+  call <sid>X('Visual',       '',              s:cool_blue,    '')
+  call <sid>X('VisualNOS',    '',              s:cool_blue,    '')
   call <sid>X('WarningMsg',   s:hue_5,         '',               '')
   call <sid>X('TooLong',      s:hue_5,         '',               '')
   call <sid>X('WildMenu',     s:syntax_fg,     s:mono_3,         '')
